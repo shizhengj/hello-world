@@ -1,0 +1,5 @@
+oc new-build --strategy docker --binary --name my-first-app -l app=my-first-app
+
+oc start-build my-first-app --from-dir . --follow
+
+oc new-app my-first-app -e LICENSE=accept -e ACE_SERVER_NAME=ACESERVER
