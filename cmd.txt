@@ -3,3 +3,11 @@ oc new-build --strategy docker --binary --name my-first-app -l app=my-first-app
 oc start-build my-first-app --from-dir . --follow
 
 oc new-app my-first-app -e LICENSE=accept -e ACE_SERVER_NAME=ACESERVER
+
+
+
+
+
+oc new-app ibmcom/ace:latest -e LICENSE=accept -e ACE_SERVER_NAME=ACESERVER
+
+http://ace-test.2886795342-80-cykoria05.environments.katacoda.com/test
