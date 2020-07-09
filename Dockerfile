@@ -6,4 +6,4 @@ ENV BAR1=test.bar
 COPY $BAR1 /tmp
 
 #Unzip the BAR file; need to use bash to make the profile work
-RUN bash -c 'source /opt/ibm/ace-11/server/bin/mqsiprofile && mqsibar -w /home/aceuser/ace-server -a /tmp/$BAR1 -c'
+RUN bash -c 'mqsibar -w /home/aceuser/ace-server -a /tmp/$BAR1 -c'
